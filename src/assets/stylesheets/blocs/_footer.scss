@@ -1,0 +1,22 @@
+/*
+--------------------------------------------------------------------------------
+Header background images
+--------------------------------------------------------------------------------
+*/
+footer {
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  // justify-content: space-between;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 1rem $page-padding;
+
+  img {
+    width: 10rem;
+    vertical-align: middle;
+    margin-left: 5px;
+  }
+}

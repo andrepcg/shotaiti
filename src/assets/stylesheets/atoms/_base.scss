@@ -1,0 +1,69 @@
+/*
+--------------------------------------------------------------------------------
+HTML elements look n feel
+--------------------------------------------------------------------------------
+*/
+html {
+  /* base font-size is at reset.scss */
+  // @include phablet { @include retina(1.3) { font-size: 80%; } }
+  // @include tablet  { @include retina(1.5) { font-size: 90%; } }
+  // @include desktop { @include retina(2)   { font-size: 100%; } }
+}
+
+body {
+  background-color: $dark;
+  color: $white;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 200;
+  letter-spacing: -.001em;
+  line-height: 2.8rem;
+}
+
+h1 {
+  font-size: 4rem;
+  letter-spacing: -.05em;
+  line-height: 140%;
+}
+
+span {
+  display: inline-block;
+}
+
+a:not(.button) {
+  @include transition();
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+  opacity: 0.7;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+b {
+  font-weight: 700;
+}
+
+strong {
+  font-weight: 900;
+}
+
+i {
+  font-style: italic;
+}
+
+html, body {
+  height: 100%;
+}
+
+#root {
+  min-height: 100% !important;
+  position:relative;
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: 600;
+}

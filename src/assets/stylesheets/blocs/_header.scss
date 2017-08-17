@@ -1,0 +1,40 @@
+/*
+--------------------------------------------------------------------------------
+Header background images
+--------------------------------------------------------------------------------
+*/
+header {
+  // position: fixed;
+  // top: 0;
+  // width: 100%;
+  // height: $header-height;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem $page-padding;
+
+  .menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    .title {
+      font-size: 7rem;
+    }
+
+    ul {
+      margin-left: 4rem;
+      li {
+        display: inline;
+        margin-left: 40px;
+      }
+    }
+  }
+
+  .room-summary {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+}

@@ -1,0 +1,63 @@
+$button-padding: 8px;
+
+@mixin button_color($color) {
+  background-color: $color;
+  box-shadow: 0 $button-raise 0 0 darken($color, 25%);
+
+  &:active {
+    transform: translateY($button-raise / 2);
+    box-shadow: 0 ($button-raise / 2) 0 0 darken($color, 25%);
+  }
+
+  &:hover {
+    background-color: darken($color, 5%);
+  }
+}
+
+
+button, .button {
+  font-size: 14px;
+  @include transition();
+  color: $white;
+  padding: $button-padding;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+
+  @include button_color($green);
+
+  .fa {
+    margin-right: 5px;
+  }
+
+  &.orange {
+    @include button_color($orange);
+  }
+
+  &.social {
+    padding: 15px;
+    font-weight: 600;
+
+    &:before {
+      font-family: FontAwesome;
+      margin-right: 8px;
+    }
+
+    &.google {
+      @include button_color(#dd4b39);
+
+      &:before {
+        content: "\f0d5";
+      }
+    }
+
+    &.facebook {
+      @include button_color(#3b5998);
+
+      &:before {
+        content: "\f230";
+      }
+    }
+  }
+}

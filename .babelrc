@@ -1,0 +1,11 @@
+{
+  "presets": ["react-app"],
+  "plugins": [
+    "transform-decorators-legacy"
+  ],
+  "env": {
+    "production": {
+      "plugins": ["transform-react-remove-prop-types"]
+    }
+  }
+}
