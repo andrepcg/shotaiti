@@ -19,8 +19,9 @@ export default class Rooms extends Component {
 
   handleLoginSuccess = (response) => {
     const { googleId, tokenId, accessToken, tokenObj, profileObj: { email, name, imageUrl } } = response;
-    console.log(response);
-    this.props.googleLogin(googleId, email, name, imageUrl, tokenId, accessToken);
+    // console.log(response);
+    // this.props.googleLogin(googleId, email, name, imageUrl, tokenId, accessToken);
+    this.props.googleLogin(accessToken);
   }
 
   handleLoginFailure = ({ error, details }) => {
@@ -29,8 +30,8 @@ export default class Rooms extends Component {
 
   handleFacebookLogin = (me) => {
     const { accessToken, signedRequest, id, name, email, picture: { data: { url } } } = me;
-    console.log(me);
-    this.props.facebookLogin(id, email, name, url);
+    // this.props.facebookLogin(id, email, name, url);
+    this.props.facebookLogin(accessToken);
   }
 
   render() {
@@ -49,6 +50,7 @@ export default class Rooms extends Component {
           callback={this.handleFacebookLogin}
           cssClass='button social facebook'
         />
+        <button>Click me</button>
       </div>
     );
   }

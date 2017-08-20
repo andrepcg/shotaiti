@@ -1,3 +1,6 @@
+![ShoTaiTi Logo](https://raw.githubusercontent.com/andrepcg/shotaiti/master/logo.png)
+
+
 Sho Tai Ti (Card game)
 ----------
 

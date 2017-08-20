@@ -2,16 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Redirect, Route } from 'react-router';
 
-const isAuthenticated = () => {
-  const { googleId, email, name, avatar, facebookId } = JSON.parse(localStorage.getItem('userInfo')) || {};
-  return email && avatar && name && (googleId || facebookId);
-};
+import { hasAuthToken } from 'utils/session';
+
 
 const LOGIN_ROUTE = '/login';
 
 const AuthRoute = ({ component, ...props }) => {
   // const { isPrivate } = component;
-  if (isAuthenticated()) {
+  if (hasAuthToken()) {
     if (props.path === LOGIN_ROUTE) {
       return <Redirect to='/' />;
     }

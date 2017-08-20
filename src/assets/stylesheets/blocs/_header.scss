@@ -9,32 +9,65 @@ header {
   // width: 100%;
   // height: $header-height;
 
+  box-shadow: 0 0 5px 1px rgba(0,0,0,0.5);
+  background-color: #0e7924;
+
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   padding: 1rem $page-padding;
+  height: 80px;
 
-  .menu {
+  .title {
+    font-size: 7rem;
+    font-weight: 700;
+    display: flex;
+    img {
+      height: 40px;
+    }
+  }
+
+  .right {
     display: flex;
     flex-direction: row;
     align-items: center;
-    .title {
-      font-size: 7rem;
-    }
 
     ul {
-      margin-left: 4rem;
+      // margin-left: 4rem;
       li {
-        display: inline;
-        margin-left: 40px;
+        display: inline-block;
+        margin-right: 40px;
+        min-width: 70px;
       }
     }
   }
 
-  .room-summary {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+  .avatar {
+    opacity: 0.9;
+    $size: 50px;
+    width: $size;
+    height: $size;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 0 3px #ffffff;
+    border-radius: 50%;
+
+    img {
+      height: auto; 
+      width: auto; 
+      max-width: $size; 
+      max-height: $size;
+      position: absolute;
+      top:50%;
+      left:50%;
+      transform: translate(-50%,-50%);
+    }
+
+    &:hover {
+      opacity: 1;
+    }
   }
 }
+
